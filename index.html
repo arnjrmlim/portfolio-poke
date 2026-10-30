@@ -12,15 +12,17 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <nav class="navbar container" aria-label="Main navigation">
-        <a class="brand" href="#home" aria-label="Aaron Lim home">
-          <span class="brand-mark">&lt;/&gt;</span>
-          <span>Aaron Lim<span class="brand-dot">.</span></span>
+    <header class="sticky top-0 z-10 border-b border-line/65 bg-bg/90 backdrop-blur-2xl">
+      <nav class="relative flex min-h-[78px] items-center justify-between gap-8 max-[700px]:min-h-[70px] mx-auto w-[calc(100%-3rem)] max-w-container-portfolio max-[700px]:w-[calc(100%-2.25rem)]" aria-label="Main navigation">
+        <a class="inline-flex items-center gap-2.5 text-[1.05rem] font-extrabold tracking-[-0.04em]" href="#home" aria-label="Aaron Lim home">
+          <span class="grid size-[37px] place-items-center text-accent">
+            <i data-lucide="orbit" class="size-6" aria-hidden="true"></i>
+          </span>
+          <span>Aaron Lim<span class="text-accent">.</span></span>
         </a>
 
         <button
-          class="menu-toggle"
+          class="hidden max-[700px]:grid size-[42px] content-center justify-items-center gap-[5px] rounded-lg border border-line bg-panel p-2.5"
           type="button"
           aria-label="Open navigation"
           aria-expanded="false"
@@ -31,137 +33,208 @@
           <span></span>
         </button>
 
-        <ul class="nav-links" id="primary-navigation">
-          <li><a class="nav-link" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#experience">Experience</a></li>
-          <li><a class="nav-link contact-link" href="#contact">Contact ↗</a></li>
+        <ul class="absolute right-0 top-[calc(100%+1px)] z-20 hidden w-full flex-col items-stretch gap-0 border-b border-line bg-bg px-[18px] pb-[18px] pt-3 md:static md:flex md:w-auto md:flex-row md:items-center md:gap-[27px] md:border-0 md:bg-transparent md:p-0" id="primary-navigation">
+          <li>
+            <a class="flex items-center gap-2 py-3.5 px-2.5 text-[0.9rem] text-muted transition-colors duration-200 hover:text-text md:p-0 md:text-[0.83rem]" href="#home">
+              <i data-lucide="house" class="h-4 w-4" aria-hidden="true"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-2 py-3.5 px-2.5 text-[0.9rem] text-muted transition-colors duration-200 hover:text-text md:p-0 md:text-[0.83rem]" href="#about">
+              <i data-lucide="user-round" class="h-4 w-4" aria-hidden="true"></i>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-2 py-3.5 px-2.5 text-[0.9rem] text-muted transition-colors duration-200 hover:text-text md:p-0 md:text-[0.83rem]" href="#skills">
+              <i data-lucide="code-2" class="h-4 w-4" aria-hidden="true"></i>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-2 py-3.5 px-2.5 text-[0.9rem] text-muted transition-colors duration-200 hover:text-text md:p-0 md:text-[0.83rem]" href="#projects">
+              <i data-lucide="folder-git-2" class="h-4 w-4" aria-hidden="true"></i>
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-2 py-3.5 px-2.5 text-[0.9rem] text-muted transition-colors duration-200 hover:text-text md:p-0 md:text-[0.83rem]" href="#experience">
+              <i data-lucide="briefcase-business" class="h-4 w-4" aria-hidden="true"></i>
+              <span>Experience</span>
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center justify-center gap-2 rounded-lg border border-line px-[15px] py-[11px] text-[0.9rem] text-muted transition-colors duration-200 hover:border-accent hover:text-text md:text-[0.83rem] max-[700px]:border-0 max-[700px]:justify-start" href="#contact">
+              <i data-lucide="mail" class="h-4 w-4" aria-hidden="true"></i>
+              <span>Contact</span>
+              <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero container" id="home" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <p class="eyebrow hero-reveal">
-            <span class="status-dot"></span>
+      <section class="relative flex min-h-[690px] items-center overflow-hidden py-24 max-[900px]:min-h-[auto] max-[700px]:py-[105px] max-[700px]:pb-[75px] mx-auto w-[calc(100%-3rem)] max-w-container-portfolio max-[700px]:w-[calc(100%-2.25rem)]" id="home" aria-labelledby="hero-title">
+        <div class="relative z-[2] w-[min(680px,68%)] max-[900px]:w-3/4 max-[700px]:w-full">
+          <p class="mb-[26px] flex items-center gap-2.5 text-[0.72rem] font-semibold tracking-[0.15em] text-muted animate-[hero-enter_850ms_cubic-bezier(0.2,0.7,0.2,1)_both]">
+            <span class="size-[7px] rounded-full bg-accent shadow-[0_0_12px_rgba(246,201,69,0.55)]"></span>
             SOFTWARE DEVELOPMENT &amp; ENGINEERING
           </p>
 
-          <h1 class="hero-title hero-reveal" id="hero-title">
+          <h1 class="m-0 max-w-[720px] text-[clamp(3rem,6.2vw,5.6rem)] font-extrabold leading-[1.04] tracking-[-0.075em] max-[700px]:text-[clamp(2.8rem,12vw,4.5rem)] animate-[hero-enter_850ms_cubic-bezier(0.2,0.7,0.2,1)_both]" id="hero-title">
             Building digital
-            <span class="title-accent">experiences</span>
+            <span class="block text-accent">experiences</span>
             with purpose.
           </h1>
 
-          <p class="hero-description hero-reveal">
+          <p class="mt-[26px] max-w-[510px] text-base leading-[1.85] text-muted max-[700px]:text-[0.95rem] animate-[hero-enter_850ms_cubic-bezier(0.2,0.7,0.2,1)_both]">
             I build practical software projects while exploring modern
             web technologies, application architecture, and better ways
             to solve problems with code.
           </p>
 
-          <div class="hero-actions hero-reveal">
-            <a class="button button-primary" href="#projects">
+          <div class="mt-8 flex flex-wrap gap-[13px] animate-[hero-enter_850ms_cubic-bezier(0.2,0.7,0.2,1)_both]">
+            <a class="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-transparent px-[19px] text-[0.88rem] font-semibold transition duration-200 hover:-translate-y-0.5 bg-accent text-bg hover:bg-[#ffda69]" href="#projects">
               Explore Projects <span aria-hidden="true">↗</span>
             </a>
 
-            <a class="button button-secondary" href="#about">
+            <a class="inline-flex min-h-12 items-center justify-center gap-3 rounded-lg border border-transparent px-[19px] text-[0.88rem] font-semibold transition duration-200 hover:-translate-y-0.5 border-line bg-panel/45 text-text hover:border-accent" href="#about">
               About Me <span aria-hidden="true">↓</span>
             </a>
           </div>
 
-          <div class="hero-meta hero-reveal">
-            <div class="meta-item">
-              <span class="meta-label">CURRENT FOCUS</span>
-              <span class="meta-value">Web Development</span>
+          <div class="mt-[65px] flex items-center gap-[27px] max-[700px]:mt-12 max-[700px]:gap-[17px] animate-[hero-enter_850ms_cubic-bezier(0.2,0.7,0.2,1)_both]">
+            <div class="grid gap-2">
+              <span class="text-[0.64rem] tracking-[0.12em] text-muted">CURRENT FOCUS</span>
+              <span class="text-[0.85rem] text-text">Web Development</span>
             </div>
 
-            <div class="meta-divider"></div>
+            <div class="h-9 w-px bg-line"></div>
 
-            <div class="meta-item">
-              <span class="meta-label">APPROACH</span>
-              <span class="meta-value">Learn by Building</span>
+            <div class="grid gap-2">
+              <span class="text-[0.64rem] tracking-[0.12em] text-muted">APPROACH</span>
+              <span class="text-[0.85rem] text-text">Learn by Building</span>
             </div>
           </div>
         </div>
+        <div
+          id="hero-orbit"
+          class="pointer-events-auto absolute right-[-35px] top-1/2 z-[1] aspect-square w-[440px] -translate-y-1/2 cursor-grab select-none touch-none opacity-100 max-[900px]:right-[-120px] max-[900px]:opacity-75 max-[700px]:right-[-210px] max-[700px]:top-[32%] max-[700px]:w-[390px] max-[700px]:opacity-50"
+          aria-hidden="true"
+        >
+          <!-- Outer solar corona -->
+          <div
+            class="absolute inset-0 animate-[orbit-breathe_4s_ease-in-out_infinite] rounded-full border-accent/45 shadow-[0_0_100px_rgba(246,201,69,0.12)]"
+          ></div>
 
-        <div class="hero-decoration" aria-hidden="true">
-          <div class="orbit orbit-outer"></div>
-          <div class="orbit orbit-middle"></div>
-          <div class="orbit orbit-inner"></div>
-          <div class="orbit-core">
-            <span>&lt;/&gt;</span>
+          <!-- Sun -->
+          <div
+            class="absolute inset-[145px] grid place-items-center rounded-full bg-[radial-gradient(circle_at_35%_30%,#fff8c9_0%,#ffe879_15%,#f6c945_38%,#f59e0b_65%,#b45309_100%)] shadow-[0_0_25px_8px_rgba(246,201,69,0.45),0_0_65px_20px_rgba(246,201,69,0.22),0_0_100px_35px_rgba(245,158,11,0.12)]"
+          >
+            <!-- Solar flare -->
+            <div
+              class="absolute -inset-3 animate-[orbit-breathe_4s_ease-in-out_infinite] rounded-full border-accent/40"
+            ></div>
+
+            <!-- Sun surface highlight -->
+            <div
+              class="absolute inset-[12%] rounded-full bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.45),transparent_55%)]"
+            ></div>
           </div>
-          <span class="orbit-node node-one"></span>
-          <span class="orbit-node node-two"></span>
-          <span class="orbit-node node-three"></span>
+
+          <!-- Inner orbit: fast planet -->
+          <div
+            class="absolute inset-[75px] animate-[orbit-rotate_8s_linear_infinite] rounded-full"
+          >
+            <span
+              class="absolute left-1/2 top-0 size-3 -translate-x-1/2 rounded-full bg-[#fff1a8] shadow-[0_0_16px_5px_rgba(246,201,69,0.65)]"
+            ></span>
+          </div>
+
+          <!-- Middle orbit: medium-speed planet -->
+          <div
+            class="absolute inset-[35px] animate-[orbit-rotate_14s_linear_infinite] rounded-full"
+          >
+            <span
+              class="absolute right-[12%] top-[12%] size-2.5 rounded-full bg-[#f6c945] shadow-[0_0_15px_4px_rgba(246,201,69,0.65)]"
+            ></span>
+          </div>
+
+          <!-- Outer orbit: slow planet -->
+          <div
+            class="absolute inset-0 animate-[orbit-rotate_22s_linear_infinite] rounded-full"
+          >
+            <span
+              class="absolute bottom-[18%] left-[8%] size-3.5 rounded-full bg-[#ffd76a] shadow-[0_0_18px_5px_rgba(246,201,69,0.65)]"
+            ></span>
+          </div>
         </div>
       </section>
      
       <!-- About section -->
       
       <section
-        class="content-section about-section"
+        class="about-section border-t border-line/65 pt-[100px] pb-[100px] max-[700px]:pt-[72px] max-[700px]:pb-[72px]"
         id="about"
         aria-labelledby="about-title"
       >
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-label">02 / ABOUT</p>
-            <h2 class="section-title" id="about-title">
+        <div class="mx-auto w-[calc(100%-3rem)] max-w-container-portfolio max-[700px]:w-[calc(100%-2.25rem)]">
+          <div class="mb-[42px] max-w-[720px] max-[700px]:mb-[30px]">
+            <p class="mb-[18px] text-[0.7rem] font-bold tracking-[0.15em] text-accent">02 / ABOUT</p>
+            <h2 class="m-0 text-[clamp(2.1rem,4.5vw,3.6rem)] leading-[1.12] tracking-[-0.06em] max-[700px]:text-[clamp(2rem,9vw,3rem)]" id="about-title">
               Turning ideas into
-              <span class="title-accent">practical software.</span>
+              <span class="inline text-accent">practical software.</span>
             </h2>
           </div>
 
-          <div class="about-grid">
-            <div class="about-copy">
-              <p>
+          <div class="grid grid-cols-[1.2fr_0.8fr] items-start gap-[60px] max-[900px]:grid-cols-1 max-[900px]:gap-8">
+            <div class="text-[0.96rem] leading-[1.9] text-muted">
+              <p class="mb-5 text-[0.96rem] leading-[1.9] text-muted last:mb-0">
                 I'm a Computer Engineering Technology graduate interested
                 in software development, backend logic, and building
                 applications that solve practical problems.
               </p>
 
-              <p>
+              <p class="mb-5 text-[0.96rem] leading-[1.9] text-muted last:mb-0">
                 My hands-on experience includes developing database-driven
                 web applications, working with business system workflows,
                 and exploring how frontend interfaces connect with backend
                 services and data.
               </p>
 
-              <p>
+              <p class="mb-5 text-[0.96rem] leading-[1.9] text-muted last:mb-0">
                 I approach development by breaking problems into manageable
                 parts, keeping code organized, testing functionality, and
                 learning the reasoning behind the tools I use.
               </p>
             </div>
 
-            <aside class="about-focus" aria-label="Development focus">
-              <p class="focus-label">DEVELOPMENT FOCUS</p>
+            <aside class="rounded-card border border-line bg-[linear-gradient(145deg,rgba(17,26,44,0.95),rgba(8,12,23,0.9))] p-[27px]" aria-label="Development focus">
+              <p class="mb-6 text-[0.67rem] font-bold tracking-[0.13em] text-muted">DEVELOPMENT FOCUS</p>
 
-              <div class="focus-item">
-                <span class="focus-number">01</span>
+              <div class="flex gap-4 border-t border-line py-[18px]">
+                <span class="pt-0.5 text-[0.75rem] font-bold text-accent">01</span>
                 <div>
-                  <h3>Application Development</h3>
-                  <p>Building functional, user-focused software.</p>
+                  <h3 class="m-0 text-[0.94rem] font-semibold">Application Development</h3>
+                  <p class="mt-2 text-[0.82rem] leading-[1.7] text-muted">Building functional, user-focused software.</p>
                 </div>
               </div>
 
-              <div class="focus-item">
-                <span class="focus-number">02</span>
+              <div class="flex gap-4 border-t border-line py-[18px]">
+                <span class="pt-0.5 text-[0.75rem] font-bold text-accent">02</span>
                 <div>
-                  <h3>Backend &amp; Data</h3>
-                  <p>Understanding application logic and data flows.</p>
+                  <h3 class="m-0 text-[0.94rem] font-semibold">Backend &amp; Data</h3>
+                  <p class="mt-2 text-[0.82rem] leading-[1.7] text-muted">Understanding application logic and data flows.</p>
                 </div>
               </div>
 
-              <div class="focus-item">
-                <span class="focus-number">03</span>
+              <div class="flex gap-4 border-t border-line py-[18px]">
+                <span class="pt-0.5 text-[0.75rem] font-bold text-accent">03</span>
                 <div>
-                  <h3>Continuous Improvement</h3>
-                  <p>Learning through experimentation and testing.</p>
+                  <h3 class="m-0 text-[0.94rem] font-semibold">Continuous Improvement</h3>
+                  <p class="mt-2 text-[0.82rem] leading-[1.7] text-muted">Learning through experimentation and testing.</p>
                 </div>
               </div>
             </aside>
@@ -171,208 +244,302 @@
 
       <!-- Technical skills section -->
       <section
-        class="content-section skills-section"
+        class="border-t border-line/65 pt-[100px] pb-[100px] max-[700px]:pt-[72px] max-[700px]:pb-[72px]"
         id="skills"
         aria-labelledby="skills-title"
       >
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-label">03 / TECHNICAL SKILLS</p>
-            <h2 class="section-title" id="skills-title">
+        <div class="mx-auto w-[calc(100%-3rem)] max-w-container-portfolio max-[700px]:w-[calc(100%-2.25rem)]">
+          <div class="mb-[42px] max-w-[720px] max-[700px]:mb-[30px]">
+            <p class="mb-[18px] text-[0.7rem] font-bold tracking-[0.15em] text-accent">03 / TECHNICAL SKILLS</p>
+            <h2 class="m-0 text-[clamp(2.1rem,4.5vw,3.6rem)] leading-[1.12] tracking-[-0.06em] max-[700px]:text-[clamp(2rem,9vw,3rem)]" id="skills-title">
               Tools I use to
-              <span class="title-accent">build and solve.</span>
+              <span class="inline text-accent">build and solve.</span>
             </h2>
-            <p class="section-description">
+            <p class="mt-4 max-w-[620px] text-[0.95rem] leading-[1.8] text-muted">
               A selection of programming languages, technologies, and tools
               I've used across coursework and practical projects.
             </p>
           </div>
 
-          <div class="skills-grid">
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true">&lt;/&gt;</span>
-              <h3>Programming</h3>
-              <p>Languages used for application logic and problem-solving.</p>
-              <ul class="skill-tags">
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>PHP</li>
+          <div class="grid grid-cols-2 gap-[18px] max-[700px]:grid-cols-1 max-[700px]:gap-[14px]">
+            <article class="min-w-0 rounded-card border border-line bg-[linear-gradient(145deg,rgba(17,26,44,0.82),rgba(12,18,32,0.9))] p-7 transition duration-200 hover:-translate-y-1 hover:border-accent/45 hover:bg-panel max-[700px]:p-[23px]">
+              <span class="mb-[22px] grid size-[43px] place-items-center text-accent" aria-hidden="true">
+                <i data-lucide="code-2" class="size-6"></i>
+              </span>
+              <h3 class="m-0 text-[1.1rem] tracking-[-0.025em]">Programming</h3>
+              <p class="my-[11px] mb-5 text-[0.85rem] leading-[1.75] text-muted">Languages used for application logic and problem-solving.</p>
+              <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Python</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">JavaScript</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Java</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">PHP</li>
               </ul>
             </article>
 
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true">◫</span>
-              <h3>Frontend Development</h3>
-              <p>Building page structures, layouts, and user interactions.</p>
-              <ul class="skill-tags">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>DOM</li>
-                <li>Responsive Design</li>
+            <article class="min-w-0 rounded-card border border-line bg-[linear-gradient(145deg,rgba(17,26,44,0.82),rgba(12,18,32,0.9))] p-7 transition duration-200 hover:-translate-y-1 hover:border-accent/45 hover:bg-panel max-[700px]:p-[23px]">
+              <span class="mb-[22px] grid size-[43px] place-items-center text-accent" aria-hidden="true">
+                <i data-lucide="monitor" class="size-6"></i>
+              </span>
+              <h3 class="m-0 text-[1.1rem] tracking-[-0.025em]">Frontend Development</h3>
+              <p class="my-[11px] mb-5 text-[0.85rem] leading-[1.75] text-muted">Building page structures, layouts, and user interactions.</p>
+              <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">HTML</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">CSS</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">DOM</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Responsive Design</li>
               </ul>
             </article>
 
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true">{ }</span>
-              <h3>Backend &amp; Databases</h3>
-              <p>Server-side development and relational data management.</p>
-              <ul class="skill-tags">
-                <li>Django</li>
-                <li>PHP PDO</li>
-                <li>MySQL</li>
-                <li>MariaDB</li>
+            <article class="min-w-0 rounded-card border border-line bg-[linear-gradient(145deg,rgba(17,26,44,0.82),rgba(12,18,32,0.9))] p-7 transition duration-200 hover:-translate-y-1 hover:border-accent/45 hover:bg-panel max-[700px]:p-[23px]">
+              <span class="mb-[22px] grid size-[43px] place-items-center text-accent" aria-hidden="true">
+                <i data-lucide="database" class="size-6"></i>
+              </span>
+              <h3 class="m-0 text-[1.1rem] tracking-[-0.025em]">Backend &amp; Databases</h3>
+              <p class="my-[11px] mb-5 text-[0.85rem] leading-[1.75] text-muted">Server-side development and relational data management.</p>
+              <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Django</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">MySQL</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">MariaDB</li>
               </ul>
             </article>
 
-            <article class="skill-card">
-              <span class="skill-icon" aria-hidden="true">⌘</span>
-              <h3>Tools &amp; Workflow</h3>
-              <p>Tools for development, version control, and testing.</p>
-              <ul class="skill-tags">
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Docker</li>
-                <li>VS Code</li>
-                <li>Visual Studio</li>
+            <article class="min-w-0 rounded-card border border-line bg-[linear-gradient(145deg,rgba(17,26,44,0.82),rgba(12,18,32,0.9))] p-7 transition duration-200 hover:-translate-y-1 hover:border-accent/45 hover:bg-panel max-[700px]:p-[23px]">
+              <span class="mb-[22px] grid size-[43px] place-items-center text-accent" aria-hidden="true">
+                <i data-lucide="wrench" class="size-6"></i>
+              </span>
+              <h3 class="m-0 text-[1.1rem] tracking-[-0.025em]">Tools &amp; Workflow</h3>
+              <p class="my-[11px] mb-5 text-[0.85rem] leading-[1.75] text-muted">Tools for development, version control, and testing.</p>
+              <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Git</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">GitHub</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Docker</li>
+                <li class="rounded-md border border-line bg-bg/60 px-2.5 py-[7px] text-[0.75rem] text-[#d5dceb]">Visual Studio</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
-      
       <!-- Projects Section -->
       <section
-        class="content-section projects-section"
         id="projects"
         aria-labelledby="projects-title"
+        class="border-t border-line/65 pt-[100px] pb-[100px] max-[700px]:pt-[72px] max-[700px]:pb-[72px]"
       >
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-label">04 / SELECTED WORK</p>
-            <h2 class="section-title" id="projects-title">
+        <div class="mx-auto w-[calc(100%-3rem)] max-w-container-portfolio max-[700px]:w-[calc(100%-2.25rem)]">
+          <!-- Section heading -->
+          <div class="mb-[42px] max-w-[720px] max-[700px]:mb-[30px]">
+            <p class="mb-[18px] text-[0.7rem] font-bold tracking-[0.15em] text-[#F6C945]">
+              04 / SELECTED WORK
+            </p>
+
+            <h2
+              id="projects-title"
+              class="m-0 text-[clamp(2.1rem,4.5vw,3.6rem)] font-normal leading-[1.12] tracking-[-0.06em] text-text max-[700px]:text-[clamp(2rem,9vw,3rem)]"
+            >
               Projects built through
-              <span class="title-accent">practice and curiosity.</span>
+              <span class="text-[#F6C945]">
+                practice and curiosity.
+              </span>
             </h2>
-            <p class="section-description">
-              A selection of applications and systems I've worked on,
-              explored, or am currently developing.
+
+            <p class="mt-5 max-w-[570px] text-[0.95rem] leading-[1.8] text-[#9CA8BD]">
+              A selection of applications I've developed, from
+              database-driven business systems to interactive web experiences.
             </p>
           </div>
 
-          <div class="projects-grid">
-            <!-- Featured Project -->
-            <article class="project-card project-card-featured">
-              <div class="project-preview project-preview-pokenexus">
-                <span class="project-preview-label">FEATURED PROJECT</span>
-                <div class="project-preview-content">
-                  <span class="project-symbol">✦</span>
-                  <p class="project-preview-name">PokéNexus</p>
-                  <p class="project-preview-caption">
+          <!-- Project cards -->
+          <div class="grid grid-cols-3 gap-[22px] max-[950px]:grid-cols-2 max-[700px]:grid-cols-1 max-[700px]:gap-[18px]">
+
+            <!-- ID Tracker -->
+            <article
+              class="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#263149] bg-[#111A2C] transition duration-200 hover:-translate-y-1 hover:border-[#F6C945]/60 motion-reduce:transform-none motion-reduce:transition-none"
+            >
+              <div class="flex min-h-[220px] flex-col items-center justify-between gap-5 bg-[radial-gradient(circle_at_50%_45%,rgba(246,201,69,0.14),transparent_55%),#0c1323] p-[22px] max-[700px]:min-h-[200px]">
+                <span class="self-start text-xs tracking-[0.08em] text-[#9CA8BD]">
+                  BUSINESS APPLICATION
+                </span>
+
+                <div class="my-auto w-full text-center">
+                  <span class="mb-3 block text-accent" aria-hidden="true">
+                    <i data-lucide="id-card" class="mx-auto size-10"></i>
+                  </span>
+                  <p class="text-2xl font-bold text-[#F5F7FB]">
+                    ID Tracker
+                  </p>
+                  <p class="mt-2 text-sm text-[#9CA8BD]">
+                    Employee ID management and status tracking
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-[26px] max-[700px]:p-[22px]">
+                <span class="text-xs uppercase tracking-[0.08em] text-[#9CA8BD]">
+                  Web Application
+                </span>
+
+                <h3 class="mt-[18px] text-xl font-semibold text-[#F5F7FB]">
+                  ID Tracker System
+                </h3>
+
+                <p class="mt-2 text-[0.94rem] leading-[1.8] text-[#9CA8BD]">
+                  A Laravel-based employee ID management system with record
+                  management, Excel import and export, role-based access control,
+                  status tracking, and audit history.
+                </p>
+
+                <ul class="mt-[22px] mb-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">Laravel 12</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">PHP</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">MySQL</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">Blade</li>
+                </ul>
+
+                <div class="mt-auto border-t border-[#263149] pt-5">
+                  <a
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-[#F6C945] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F6C945]"
+                    href="https://github.com/arnjrmlim/id-tracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View ID Tracker source code on GitHub (opens in a new tab)"
+                  >
+                    View Source <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Attendance-IMS -->
+            <article
+              class="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#263149] bg-[#111A2C] transition duration-200 hover:-translate-y-1 hover:border-[#F6C945]/60 motion-reduce:transform-none motion-reduce:transition-none"
+            >
+              <div class="flex min-h-[220px] flex-col items-center justify-between gap-5 bg-[radial-gradient(circle_at_50%_45%,rgba(87,166,255,0.15),transparent_55%),#0c1323] p-[22px] max-[700px]:min-h-[200px]">
+                <span class="self-start text-xs tracking-[0.08em] text-[#9CA8BD]">
+                  WORKFORCE MANAGEMENT
+                </span>
+
+                <div class="my-auto w-full text-center">
+                  <span class="mb-3 block text-accent" aria-hidden="true">
+                    <i data-lucide="calendar-check" class="mx-auto size-10"></i>
+                  </span>
+                  <p class="text-2xl font-bold text-[#F5F7FB]">
+                    Attendance-IMS
+                  </p>
+                  <p class="mt-2 text-sm text-[#9CA8BD]">
+                    Attendance, approvals, and reporting
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-[26px] max-[700px]:p-[22px]">
+                <span class="text-xs uppercase tracking-[0.08em] text-[#9CA8BD]">
+                  Management System
+                </span>
+
+                <h3 class="mt-[18px] text-xl font-semibold text-[#F5F7FB]">
+                  Attendance-IMS
+                </h3>
+
+                <p class="mt-2 text-[0.94rem] leading-[1.8] text-[#9CA8BD]">
+                  An attendance management portal featuring employee attendance
+                  workflows, leave requests, approval processes, reporting,
+                  notifications, and automated system maintenance.
+                </p>
+
+                <ul class="mt-[22px] mb-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">PHP</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">MySQL / MariaDB</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">Bootstrap 5</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">JavaScript</li>
+                </ul>
+
+                <div class="mt-auto border-t border-[#263149] pt-5">
+                  <a
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-[#F6C945] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F6C945]"
+                    href="https://github.com/arnjrmlim/attendance-ims"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Attendance-IMS source code on GitHub (opens in a new tab)"
+                  >
+                    View Source <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PokéNexus -->
+            <article
+              class="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#263149] bg-[#111A2C] transition duration-200 hover:-translate-y-1 hover:border-[#F6C945]/60 motion-reduce:transform-none motion-reduce:transition-none"
+            >
+              <div class="flex min-h-[220px] flex-col items-center justify-between gap-5 bg-[radial-gradient(circle_at_50%_45%,rgba(246,201,69,0.16),transparent_50%),#0c1323] p-[22px] max-[700px]:min-h-[200px]">
+                <span class="self-start text-xs tracking-[0.08em] text-[#9CA8BD]">
+                  PERSONAL PROJECT
+                </span>
+
+                <div class="my-auto w-full text-center">
+                  <span class="mb-3 block text-accent" aria-hidden="true">
+                    <i data-lucide="orbit" class="mx-auto size-10"></i>
+                  </span>
+                  <p class="text-2xl font-bold text-[#F5F7FB]">
+                    PokéNexus
+                  </p>
+                  <p class="mt-2 text-sm text-[#9CA8BD]">
                     Every Pokémon. One universe.
                   </p>
                 </div>
               </div>
 
-              <div class="project-content">
-                <div class="project-meta">
-                  <span class="project-type">Personal Project</span>
-                  <span class="project-status">In Development</span>
+              <div class="flex flex-1 flex-col p-[26px] max-[700px]:p-[22px]">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="text-xs uppercase tracking-[0.08em] text-[#9CA8BD]">
+                    Interactive Web App
+                  </span>
+                  <span class="text-xs font-semibold text-[#F6C945]">
+                    In Development
+                  </span>
                 </div>
 
-                <h3>PokéNexus — Pokémon Explorer</h3>
-                <p>
-                  An interactive Pokédex powered by PokéAPI, designed
-                  to explore Pokémon information, compare stats, manage
-                  favorites, and discover evolution lines.
+                <h3 class="mt-[18px] text-xl font-semibold text-[#F5F7FB]">
+                  PokéNexus — Pokémon Explorer
+                </h3>
+
+                <p class="mt-2 text-[0.94rem] leading-[1.8] text-[#9CA8BD]">
+                  An interactive Pokédex powered by PokéAPI, designed for exploring
+                  Pokémon details, comparing stats, managing favorites, and
+                  discovering evolution lines.
                 </p>
 
-                <ul class="tech-tags" aria-label="Technologies used">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>PokéAPI</li>
-                  <li>Vite</li>
+                <ul class="mt-[22px] mb-6 flex flex-wrap gap-2" aria-label="Technologies used">
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">HTML</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">CSS</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">JavaScript</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">Vite</li>
+                  <li class="rounded-md border border-[#263149] px-2.5 py-1.5 text-xs text-[#F5F7FB]">REST API</li>
                 </ul>
 
-                <div class="project-links">
+                <div class="mt-auto flex flex-wrap gap-4 border-t border-[#263149] pt-5">
                   <a
-                    class="project-link"
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-[#F6C945] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F6C945]"
+                    href="https://github.com/arnjrmlim"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Aaron's GitHub profile (opens in a new tab)"
+                  >
+                    GitHub Profile <span aria-hidden="true">↗</span>
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-[#F6C945] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#F6C945]"
                     href="https://pokeapi.co/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit the PokéAPI website (opens in a new tab)"
                   >
-                    API Reference ↗
+                    PokéAPI <span aria-hidden="true">↗</span>
                   </a>
-                  <!-- Add your PokéNexus repository and live demo links here. -->
                 </div>
               </div>
             </article>
 
-            <!-- Academic / Personal Project -->
-            <article class="project-card">
-              <div class="project-preview project-preview-braille">
-                <span class="project-preview-label">ASSISTIVE TECHNOLOGY</span>
-                <div class="project-preview-content">
-                  <span class="project-symbol">⠿</span>
-                  <p class="project-preview-name">Braille Buddy</p>
-                  <p class="project-preview-caption">
-                    Bridging digital text and tactile output.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-meta">
-                  <span class="project-type">Academic Project</span>
-                </div>
-
-                <h3>Braille Translation System</h3>
-                <p>
-                  An assistive technology project combining an Android
-                  application with a mini-embosser to support the
-                  translation of text into Braille.
-                </p>
-
-                <ul class="tech-tags" aria-label="Technologies used">
-                  <li>Java</li>
-                  <li>Android</li>
-                  <li>Hardware Integration</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- Software Project -->
-            <article class="project-card">
-              <div class="project-preview project-preview-cus">
-                <span class="project-preview-label">SYSTEM DEVELOPMENT</span>
-                <div class="project-preview-content">
-                  <span class="project-symbol">{ }</span>
-                  <p class="project-preview-name">Computer Usage System</p>
-                  <p class="project-preview-caption">
-                    Monitoring computer laboratory usage.
-                  </p>
-                </div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-meta">
-                  <span class="project-type">Software Project</span>
-                </div>
-
-                <h3>Computer Usage System</h3>
-                <p>
-                  A desktop application developed to monitor computer
-                  usage in a laboratory environment.
-                </p>
-
-                <ul class="tech-tags" aria-label="Technologies used">
-                  <li>VB.NET</li>
-                  <li>Desktop Development</li>
-                </ul>
-              </div>
-            </article>
           </div>
         </div>
       </section>
